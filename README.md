@@ -20,17 +20,10 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Project Approach
 
-To learn more about Next.js, take a look at the following resources:
+This is my first time creating app like this. My initial thought is how I can make an app that display the array of data (json data) one at a time.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I did thought using some global state is a better idea at least in this case, for small amount of incoming data. I am using zustand for simple global state because of its simplicity. I just track each index, update it after one question done.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For the UI wise, this is my first time using MUI so it quite challenging to understand, I usually use tailwind with shadcn/next UI. It's should be responsive as like edbot.ai website accross the browser.
