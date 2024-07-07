@@ -22,10 +22,15 @@ const InfoModal = ({ open, handleClose }: Props) => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: 600,
-            height: 400,
+            width: {
+              xs: "80%",
+              lg: "600px",
+              xl: "600px",
+            },
+            height: "400px",
             boxShadow: 24,
             p: 4,
+
             background: "linear-gradient(0deg, #fff 76.89%, #ffe88a 101.58%)",
             borderRadius: "24px",
             display: "flex",
