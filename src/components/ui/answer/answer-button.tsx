@@ -8,11 +8,11 @@ type Props = {
   questionId: number;
 };
 
-const AnswerButton = ({ children, value, questionId }: Props) => {
+const AnswerButton = ({ children, value }: Props) => {
   const { addAnswer } = useQuestionStore();
 
   const clickHandler = () => {
-    addAnswer({ question_id: questionId, answer: value });
+    addAnswer({ answer: value });
   };
 
   return (

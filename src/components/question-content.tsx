@@ -53,6 +53,7 @@ const QuestionContent = () => {
     if (userAnswer && userAnswer !== answer) {
       setIsCorrect(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userAnswer]);
 
   return (
