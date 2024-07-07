@@ -1,16 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import { Box, Typography, Button } from "@mui/material";
 
-export default function Home() {
+import useQuestionStore from "@/store/question-store";
+
+export default function ThankYou() {
+  const { resetAnswers } = useQuestionStore();
+
   return (
     <Box
       sx={{
         height: "100vh",
-        width: "100%",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column",
         gap: "32px",
       }}
     >
@@ -20,9 +25,14 @@ export default function Home() {
         fontWeight={700}
         color="rgb(76, 175, 80)"
       >
-        Welcome
+        Thank you
       </Typography>
-      <Link href="/questions">
+      <Link
+        href="/"
+        onClick={() => {
+          resetAnswers();
+        }}
+      >
         <Button
           variant="contained"
           sx={{
@@ -35,7 +45,7 @@ export default function Home() {
             },
           }}
         >
-          Start
+          Back to Home
         </Button>
       </Link>
     </Box>
